@@ -13,6 +13,9 @@
 
     <style>
     
+    div{
+        border: 1px solid red;
+    }
 
         .ball {
 
@@ -22,11 +25,19 @@
             font-weight: bold;
             margin: 10px;
             text-align: center;
-            border: 1px solid black;
+            border: 1px solid rgb(255, 255, 255);
             background-color: rgb(255, 153, 0);
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             border-radius: 80px;
             display: none;
+        }
+
+        .letfNum{
+          
+            font-size: 40px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-left: 10px;
         }
 
         #selectNum{
@@ -38,6 +49,12 @@
             text-align: center;
             background-color: rgb(255, 153, 0);
         }
+
+        /* #start{
+            display: none;
+        }
+        */
+      
     </style>
 
 </head>
@@ -70,11 +87,12 @@
 
         </div>
     
-        <div class="col-4">
+        <div class="col-4" >
     
-            <div class="text-center">
+            <div id="midPanel" class="text-center">
                 <div class="mb-3"><input id="selectNum" type="text"></div>
                 <div><button id="addBtn" class="btn btn-primary">Sayı Ekle</button></div>
+                <!-- <div class="text-center" ><button id="start" class="btn btn-danger mt-2">Başla</button></div> -->
 
             </div>
 
