@@ -7,25 +7,34 @@ arrPush()
     function arrPush() {
 
         var num = 0
-        for (let index = 0; index < 49; index++) {
-            num++
+        
+       var timeControl = setInterval(function () { 
+           num++
             numList.push(num)
             
             var span = document.createElement("span")
-            span.className = "ball pt-2"
+            span.className = "ball pt-2 "
             span.innerHTML += `${num}`
 
+         
+                column.appendChild(span)
+                $(span).fadeIn("");
 
-            column.appendChild(span)
-
-        }
+                if(num == 49){
+                    clearInterval(timeControl)
+                }
+        },100)
+        
+         
     }
 
+ 
+    
 
 
 
     
 
-    console.log(numList)
+  
 
 });
