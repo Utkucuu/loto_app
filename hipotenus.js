@@ -28,7 +28,22 @@ arrPush()
          
     }
 
- 
+    const selectNum = document.getElementById("selectNum")
+    const leftPanel = document.getElementById("leftPanel")
+    
+    console.log(selectNum)
+
+    $("#addBtn").click(function () { 
+        
+        var numDiv = document.createElement("div")
+        
+        numDiv.innerHTML = selectNum.value
+
+        leftPanel.appendChild(numDiv)
+
+     
+    });
+    
     
 
 
