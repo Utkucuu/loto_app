@@ -62,7 +62,7 @@ $(document).ready(function () {
                     $("#addBtn").attr('disabled', 'disabled');
                     // $("#start").css('display','block' );
                     // $("#start").css('align-items', 'center' );
-                     document.getElementById("midPanel").innerHTML +=` <div class="text-center" ><button id="start" class="btn btn-danger mt-2">Başla</button></div>`
+                    document.getElementById("midPanel").innerHTML += ` <div class="text-center" ><button id="start" class="btn btn-danger mt-2">Başla</button></div>`
 
 
                 }
@@ -70,7 +70,7 @@ $(document).ready(function () {
         }
 
         console.log()
-        
+
 
     });
 
