@@ -1,1 +1,1 @@
-Loto App 
+Hatalar düzeltilince burada proje açıklanacak.
