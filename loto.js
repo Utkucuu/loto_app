@@ -3,6 +3,8 @@ $(document).ready(function () {
     const numList = []
     const column = document.getElementById("column")
 
+
+
     arrPush()
     function arrPush() {
 
@@ -29,6 +31,7 @@ $(document).ready(function () {
 
     const selectNum = document.getElementById("selectNum")
     const leftPanel = document.getElementById("leftPanel")
+   
 
 
 
@@ -59,20 +62,28 @@ $(document).ready(function () {
                 selectNum.value = ""
 
                 if (c == 1) {
-                    $("#addBtn").attr('disabled', 'disabled');
-                    // $("#start").css('display','block' );
-                    // $("#start").css('align-items', 'center' );
-                    document.getElementById("midPanel").innerHTML += `<div class="text-center" ><button id="start" class="btn btn-danger mt-2">Başla</button></div>`
+                    // $("#addBtn").attr('disabled', 'disabled');
+                    $("#addBtn").fadeOut(1);
+                    $('#start').fadeIn("slow")
 
 
                 }
             }
         }
 
-        console.log()
-
 
     });
+
+
+
+        $('#start').click(function () { 
+            for (let index = 0; index < numList.length; index++) {
+                
+                
+            }
+            
+        });
+
 
 
 
