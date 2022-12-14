@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
-    const righPanel = document.getElementById("righPanel")
+    const rightPanel = document.getElementById("rightPanel")
 
 
 
@@ -140,7 +140,10 @@ $(document).ready(function () {
                
                     numRandom.forEach(e => {
                         if (selecList.includes(e)) {
-                           console.log(e)
+
+
+                            rightPanel.innerHTML += `<div class="rightPanelNum ">${e}</div>`
+                   
                         }
                        
                     });
