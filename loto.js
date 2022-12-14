@@ -24,7 +24,7 @@ $(document).ready(function () {
             if (num == 49) {
                 clearInterval(timeControl)
             }
-        }, 100)
+        }, 10)
 
 
     }
@@ -32,6 +32,7 @@ $(document).ready(function () {
     const selectNum = document.getElementById("selectNum")
     const leftPanel = document.getElementById("leftPanel")
    
+
 
 
 
@@ -77,11 +78,30 @@ $(document).ready(function () {
 
 
         $('#start').click(function () { 
-            for (let index = 0; index < numList.length; index++) {
+          
+            var counter = -1
+
+            var drav =  setInterval (function () {
+                counter++
+
+             if(counter < 49){
+                     column.children[counter].className = "ballYellow pt-2"
+                   
+                setTimeout(function(){
+                    column.children[counter].className = "ball pt-2"
+                },20)
+                }
+
+                else{
+                    counter = -1
+                }
+                   
+
                 
-                
-            }
-            
+
+              },100)
+ 
+        
         });
 
 
