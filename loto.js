@@ -94,7 +94,7 @@ $(document).ready(function () {
         var numControl = -1
 
 
-        var drav = setInterval(function () {
+        var draw = setInterval(function () {
             counter++
 
             if (counter < 49) {
@@ -118,7 +118,12 @@ $(document).ready(function () {
                 column.children[numRandom[numControl]].style.background ="yellowGreen"  
            
 
+
                 }
+                if(numControl ==1){
+                    clearInterval(draw)
+                }
+             
 
             }
 
