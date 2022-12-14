@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
-   
+
 
 
 
@@ -78,44 +78,45 @@ $(document).ready(function () {
 
 
 
-        $('#start').click(function () { 
-          
-            const numRandom = []
-            for (let i = 0; i < 6; i++) {
-                
-                numRandom.push(Math.floor(Math.random() * 50)   )
-                
-            }
-             
-            console.log(numRandom)
+    $('#start').click(function () {
 
-            var counter = -1
+        const numRandom = []
+        for (let i = 0; i < 6; i++) {
 
-            var drav =  setInterval (function () {
-                counter++
+            numRandom.push(Math.floor(Math.random() * 50))
 
-                var numControl = -1
+        }
 
-             if(counter < 49){
-                     column.children[counter].className = "ballYellow pt-2"
-                   
-                setTimeout(function(){
+        console.log(numRandom)
+
+        var counter = -1
+        var numControl = -1
+        var drav = setInterval(function () {
+            counter++
+
+
+
+            if (counter < 49) {
+                column.children[counter].className = "ballYellow pt-2"
+
+                setTimeout(function () {
                     column.children[counter].className = "ball pt-2"
 
-                },20)
+                }, 20)
 
-                }
+            }
 
-                else{
-                    counter = -1
-                    
-                }
-                   
+            else {
+                counter = -1
+                numControl++
+                console.log(numControl)
+            }
 
-              },100)
- 
-        
-        });
+
+        }, 100)
+
+
+    });
 
 
 
