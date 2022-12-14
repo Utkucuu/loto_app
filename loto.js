@@ -124,9 +124,13 @@ $(document).ready(function () {
                     console.log(selecList)
                     console.log(numRandom)
 
+                    // selecList.forEach(function (e) {
+                    //     if(numRandom.includes(e)){
+                    //         console.log(e)
+                    //     }
 
-
-
+                    //   })
+                    
                 }
 
             }
