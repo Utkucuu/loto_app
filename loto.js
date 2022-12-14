@@ -25,7 +25,7 @@ $(document).ready(function () {
             if (num == 49) {
                 clearInterval(timeControl)
             }
-        }, 10)
+        }, 100)
 
 
     }
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
                 selectInput.value = ""
 
-                if (c == 1) {
+                if (c == 6) {
                     // $("#addBtn").attr('disabled', 'disabled');
                     $("#addBtn").fadeOut(1);
                     $('#start').fadeIn("slow")
@@ -93,7 +93,6 @@ $(document).ready(function () {
         var counter = -1
         var numControl = -1
 
-
         var draw = setInterval(function () {
             counter++
 
@@ -102,7 +101,6 @@ $(document).ready(function () {
 
                 setTimeout(function () {
                     column.children[counter].className = "ball pt-2"
-
 
                 }, 20)
 
@@ -113,23 +111,27 @@ $(document).ready(function () {
                 numControl++
                 console.log(numControl)
 
-                if(numList.includes(numRandom[numControl])){
+                if (numList.includes(numRandom[numControl])) {
 
-                column.children[numRandom[numControl]].style.background ="yellowGreen"  
-           
-
+                    column.children[numRandom[numControl]].style.background = "yellowGreen"
 
                 }
-                if(numControl ==1){
+
+                if (numControl == 5) {
                     clearInterval(draw)
+
+
+                    console.log(selecList)
+                    console.log(numRandom)
+
+
+
+
                 }
-             
 
             }
 
-
         }, 100)
-
 
     });
 
