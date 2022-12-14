@@ -34,18 +34,11 @@ $(document).ready(function () {
     const leftPanel = document.getElementById("leftPanel")
     const rightPanel = document.getElementById("rightPanel")
 
-
-
-
-
     var c = 0
 
     const selecList = []
 
-
     $("#addBtn").click(function () {
-
-
 
         var numDiv = document.createElement("div")
 
@@ -56,7 +49,6 @@ $(document).ready(function () {
 
             if (!selecList.includes(selectInput.value)) {
 
-
                 c++
                 leftPanel.appendChild(numDiv)
 
@@ -64,44 +56,40 @@ $(document).ready(function () {
 
                 selectInput.value = ""
 
-                if (c == 6) {
+                if (c == 1) {
                     // $("#addBtn").attr('disabled', 'disabled');
                     $("#addBtn").fadeOut(1);
                     $('#start').fadeIn("slow")
-
-                
                 }
             }
         }
 
-
     });
-
-
 
     $('#start').click(function () {
 
-        var numberlist = Number(selecList)
+        // var numberlist = Number(selecList)
 
         const numRandom = []
         var issue
         for (let i = 0; i < 6; i++) {
-            issue = (Math.floor(Math.random() * 10) + 1)
-            if (numRandom.indexOf(issue) == -1) {
+            issue = (Math.floor(Math.random() * 6))
+            if (numRandom.indexOf(issue) == -1 ) {
                 numRandom.push(issue)
             }
             else {
                 i--
             }
-
         }
 
         console.log(numRandom)
 
         var counter = -1
+
         var numControl = -1
 
         var draw = setInterval(function () {
+
             counter++
 
             if (counter < 49) {
@@ -123,34 +111,22 @@ $(document).ready(function () {
 
                     column.children[numRandom[numControl]].style.background = "yellowGreen"
 
-                    
-                 
-              
-
                 }
 
-                
                 if (numControl == 5) {
                     clearInterval(draw)
 
-                  
                     console.log( selecList)
                     console.log( numRandom)
 
-               
                     numRandom.forEach(e => {
                         if (selecList.includes(e)) {
 
-
-                            rightPanel.innerHTML += `<div class="rightPanelNum ">${e}</div>`
+                            rightPanel.innerHTML += `<div class="rightPanelNum pt-1">${e}</div>`
                    
                         }
                        
                     });
-
-
-
-
 
                 }
 
