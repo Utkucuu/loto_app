@@ -60,7 +60,7 @@ $(document).ready(function () {
                 c++
                 leftPanel.appendChild(numDiv)
 
-                selecList.push(selectInput.value)
+                selecList.push(Number(selectInput.value))
 
                 selectInput.value = ""
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
                     $("#addBtn").fadeOut(1);
                     $('#start').fadeIn("slow")
 
-
+                
                 }
             }
         }
@@ -81,17 +81,18 @@ $(document).ready(function () {
 
     $('#start').click(function () {
 
+        var numberlist = Number(selecList)
+
         const numRandom = []
-var issue
+        var issue
         for (let i = 0; i < 6; i++) {
-           issue =  Math.floor(Math.random() * 50)
-            if (numRandom.indexOf(issue)==-1){
-                 numRandom.push(issue)
-            }
-               else{
-                issue++
+            issue = (Math.floor(Math.random() * 10) + 1)
+            if (numRandom.indexOf(issue) == -1) {
                 numRandom.push(issue)
-               }
+            }
+            else {
+                i--
+            }
 
         }
 
@@ -109,7 +110,7 @@ var issue
                 setTimeout(function () {
                     column.children[counter].className = "ball pt-2"
 
-                }, 20)
+                }, 2)
 
             }
 
@@ -122,27 +123,37 @@ var issue
 
                     column.children[numRandom[numControl]].style.background = "yellowGreen"
 
+                    
+                 
+              
+
                 }
 
+                
                 if (numControl == 5) {
                     clearInterval(draw)
 
+                  
+                    console.log( selecList)
+                    console.log( numRandom)
 
-                    console.log(selecList)
-                    console.log(numRandom)
+               
+                    numRandom.forEach(e => {
+                        if (selecList.includes(e)) {
+                           console.log(e)
+                        }
+                       
+                    });
 
-                    // selecList.forEach(function (e) {
-                    //     if(numRandom.includes(e)){
-                    //         console.log(e)
-                    //     }
 
-                    //   })
-                    
+
+
+
                 }
 
             }
 
-        }, 100)
+        }, 10)
 
     });
 
