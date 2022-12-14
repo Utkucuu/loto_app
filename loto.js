@@ -82,9 +82,16 @@ $(document).ready(function () {
     $('#start').click(function () {
 
         const numRandom = []
+var issue
         for (let i = 0; i < 6; i++) {
-
-            numRandom.push(Math.floor(Math.random() * 50))
+           issue =  Math.floor(Math.random() * 50)
+            if (numRandom.indexOf(issue)==-1){
+                 numRandom.push(issue)
+            }
+               else{
+                issue++
+                numRandom.push(issue)
+               }
 
         }
 
