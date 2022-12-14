@@ -32,6 +32,7 @@ $(document).ready(function () {
 
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
+    const righPanel = document.getElementById("righPanel")
 
 
 
@@ -91,16 +92,17 @@ $(document).ready(function () {
 
         var counter = -1
         var numControl = -1
+
+
         var drav = setInterval(function () {
             counter++
-
-
 
             if (counter < 49) {
                 column.children[counter].className = "ballYellow pt-2"
 
                 setTimeout(function () {
                     column.children[counter].className = "ball pt-2"
+
 
                 }, 20)
 
@@ -110,6 +112,14 @@ $(document).ready(function () {
                 counter = -1
                 numControl++
                 console.log(numControl)
+
+                if(numList.includes(numRandom[numControl])){
+
+                column.children[numRandom[numControl]].style.background ="yellowGreen"  
+           
+
+                }
+
             }
 
 
