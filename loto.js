@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     const numList = []
+
     const column = document.getElementById("column")
 
 
@@ -29,7 +30,7 @@ $(document).ready(function () {
 
     }
 
-    const selectNum = document.getElementById("selectNum")
+    const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
    
 
@@ -47,20 +48,20 @@ $(document).ready(function () {
 
         var numDiv = document.createElement("div")
 
-        numDiv.innerHTML = selectNum.value
+        numDiv.innerHTML = selectInput.value
         numDiv.className = "letfNum"
 
-        if (0 < selectNum.value && selectNum.value < 50) {
+        if (0 < selectInput.value && selectInput.value < 50) {
 
-            if (!selecList.includes(selectNum.value)) {
+            if (!selecList.includes(selectInput.value)) {
 
 
                 c++
                 leftPanel.appendChild(numDiv)
 
-                selecList.push(selectNum.value)
+                selecList.push(selectInput.value)
 
-                selectNum.value = ""
+                selectInput.value = ""
 
                 if (c == 1) {
                     // $("#addBtn").attr('disabled', 'disabled');
@@ -79,25 +80,37 @@ $(document).ready(function () {
 
         $('#start').click(function () { 
           
+            const numRandom = []
+            for (let i = 0; i < 6; i++) {
+                
+                numRandom.push(Math.floor(Math.random() * 50)   )
+                
+            }
+             
+            console.log(numRandom)
+
             var counter = -1
 
             var drav =  setInterval (function () {
                 counter++
+
+                var numControl = -1
 
              if(counter < 49){
                      column.children[counter].className = "ballYellow pt-2"
                    
                 setTimeout(function(){
                     column.children[counter].className = "ball pt-2"
+
                 },20)
+
                 }
 
                 else{
                     counter = -1
+                    
                 }
                    
-
-                
 
               },100)
  
