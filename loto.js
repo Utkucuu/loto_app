@@ -12,11 +12,11 @@ $(document).ready(function () {
 
     /********** Adım 2 ***********/
     const numList = []
-
+    console.log(numList)
 
     arrPush()
 
-    function arrPush() {
+    function arrPush() {  
 
         var num = 0
 
@@ -36,11 +36,9 @@ $(document).ready(function () {
             }
         }, 100)
 
-
     }
 
-
-
+ /********** Adım 3 ***********/
     var c = 0
 
     const selecList = []
@@ -63,7 +61,7 @@ $(document).ready(function () {
 
                 selectInput.value = ""
 
-                if (c == 1) {
+                if (c == 6) {
                     // $("#addBtn").attr('disabled', 'disabled');
                     $("#addBtn").fadeOut(1);
                     $('#start').fadeIn("slow")
@@ -80,16 +78,15 @@ $(document).ready(function () {
         const numRandom = []
         var issue
         for (let i = 0; i < 6; i++) {
-            issue = (Math.floor(Math.random() * 6))
+            issue = (Math.floor(Math.random() * 49)+1) // ceil - floor
             if (numRandom.indexOf(issue) == -1) {
                 numRandom.push(issue)
+                console.log(issue)
             }
             else {
                 i--
             }
         }
-
-        console.log(numRandom)
 
         var counter = -1
 
@@ -110,21 +107,20 @@ $(document).ready(function () {
             }
 
             else {
+
                 counter = -1
                 numControl++
+
                 console.log(numControl)
 
                 if (numList.includes(numRandom[numControl])) {
 
                     column.children[numRandom[numControl]].style.background = "yellowGreen"
-
+               
                 }
 
                 if (numControl == 5) {
                     clearInterval(draw)
-
-                    console.log(selecList)
-                    console.log(numRandom)
 
                     numRandom.forEach(e => {
                         if (selecList.includes(e)) {
@@ -132,13 +128,9 @@ $(document).ready(function () {
                             rightPanel.innerHTML += `<div class="rightPanelNum pt-1">${e}</div>`
 
                         }
-
                     });
-
                 }
-
             }
-
         }, 10)
 
     });
