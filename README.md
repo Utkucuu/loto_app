@@ -16,3 +16,8 @@ Adım 3
 
 
 Adım 4
+- $('#start').click fonskiyonu başla butonuna bastığımızda çalışacak ve numRandom isminde bir array ve issue değişkeni oluşacak. for döngüsü başladığında her seferinde issue değişkenine random bir değer atanacak. 
+- if bloğu içinde eğer numRandom arrayi içinde issue yoksa issue değişkenine atanan değer numRandom array ine pushlanacak.
+else bloğu çalışırsa issue ye atanan random sayı değeri numRandom arrayi içinde var demektir. bu sebepler i değeri azalacak ve for döngüsü tekrar random değer üretecek. bu şekilde array içine aynı sayının 2 kez gönderilmemesi sağlanıyor.
+- for döngüsü bittiğinde birbirinden farklı 6 random değer oluşmuş olacak ve counter ile numControl değişkenleri -1 değeri alarak oluşacak.
+- draw fonksiyonu counter 49 kez artasıya kadar çalışacak ve her seferinde bu değişkenin değeri artacak. eğer 49 dan küçükse counter ı index olarak kullanıp column ' un alt elementlerinin classı değişecek ve oluşturduğumuz topların background ları tek tek yeşil olacak. setTimeout fonksiyonu sayesinde ise aynı mantıkla topların background renkleri eski haline dönecek.

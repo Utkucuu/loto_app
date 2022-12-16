@@ -1,14 +1,10 @@
-
-
 /********** Adım 1 ***********/
 $(document).ready(function () {
-
 
     const column = document.getElementById("column")
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
     const rightPanel = document.getElementById("rightPanel")
-
 
     /********** Adım 2 ***********/
     const numList = []
@@ -18,7 +14,7 @@ $(document).ready(function () {
 
     function arrPush() {  
 
-        var num = 0
+        var num = -1
 
         var timeControl = setInterval(function () {
             num++
@@ -36,8 +32,10 @@ $(document).ready(function () {
             }
         }, 100)
 
+
     }
 
+  
  /********** Adım 3 ***********/
     var c = 0
 
@@ -71,6 +69,8 @@ $(document).ready(function () {
 
     });
 
+ /********** Adım 4 ***********/
+ 
     $('#start').click(function () {
 
         // var numberlist = Number(selecList)
