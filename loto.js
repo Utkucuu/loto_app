@@ -1,12 +1,21 @@
+
+
+/********** Adım 1 ***********/
 $(document).ready(function () {
 
-    const numList = []
 
     const column = document.getElementById("column")
+    const selectInput = document.getElementById("selectInput")
+    const leftPanel = document.getElementById("leftPanel")
+    const rightPanel = document.getElementById("rightPanel")
 
+
+    /********** Adım 2 ***********/
+    const numList = []
 
 
     arrPush()
+
     function arrPush() {
 
         var num = 0
@@ -30,9 +39,7 @@ $(document).ready(function () {
 
     }
 
-    const selectInput = document.getElementById("selectInput")
-    const leftPanel = document.getElementById("leftPanel")
-    const rightPanel = document.getElementById("rightPanel")
+
 
     var c = 0
 
@@ -74,7 +81,7 @@ $(document).ready(function () {
         var issue
         for (let i = 0; i < 6; i++) {
             issue = (Math.floor(Math.random() * 6))
-            if (numRandom.indexOf(issue) == -1 ) {
+            if (numRandom.indexOf(issue) == -1) {
                 numRandom.push(issue)
             }
             else {
@@ -116,16 +123,16 @@ $(document).ready(function () {
                 if (numControl == 5) {
                     clearInterval(draw)
 
-                    console.log( selecList)
-                    console.log( numRandom)
+                    console.log(selecList)
+                    console.log(numRandom)
 
                     numRandom.forEach(e => {
                         if (selecList.includes(e)) {
 
                             rightPanel.innerHTML += `<div class="rightPanelNum pt-1">${e}</div>`
-                   
+
                         }
-                       
+
                     });
 
                 }
