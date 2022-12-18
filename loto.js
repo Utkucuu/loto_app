@@ -12,29 +12,49 @@ $(document).ready(function () {
 
     arrPush()
 
+    
+
+    
+
+   
+    
+
+    var element = document.getElementsByClassName("ball pt-2")
+       
+  console.log(element)
+    
+  
+  setTimeout(function () {
+    element[0].remove() 
+    },101)
+  
+
+
     function arrPush() {  
-
         var num = -1
-
+        
+        
+        
+        // console.log(column.children[0])
         var timeControl = setInterval(function () {
             num++
             numList.push(num)
-
+            
             var span = document.createElement("span")
             span.className = "ball pt-2 "
             span.innerHTML += `${num}`
-
+            
             column.appendChild(span)
             $(span).fadeIn("");
-
+            
             if (num == 49) {
                 clearInterval(timeControl)
             }
         }, 100)
-
-
+        
+        
     }
-
+    
   
  /********** Adım 3 ***********/
     var c = 0
@@ -42,6 +62,8 @@ $(document).ready(function () {
     const selecList = []
 
     $("#addBtn").click(function () {
+
+            $('#selectInput').focus()
 
         var numDiv = document.createElement("div")
 
@@ -70,7 +92,7 @@ $(document).ready(function () {
     });
 
  /********** Adım 4 ***********/
- 
+
     $('#start').click(function () {
 
         // var numberlist = Number(selecList)
@@ -88,7 +110,7 @@ $(document).ready(function () {
             }
         }
 
-        var counter = -1
+        var counter = 0
 
         var numControl = -1
 
@@ -106,9 +128,12 @@ $(document).ready(function () {
 
             }
 
+            
+ /********** Adım 4-a ***********/
+
             else {
 
-                counter = -1
+                counter = 0
                 numControl++
 
                 console.log(numControl)
