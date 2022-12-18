@@ -21,7 +21,7 @@ $(document).ready(function () {
             numList.push(num)
 
             var span = document.createElement("span")
-            span.className = "ball pt-2 "
+            span.className = "ball pt-2"
             span.innerHTML += `${num}`
 
             column.appendChild(span)
@@ -29,6 +29,10 @@ $(document).ready(function () {
 
             if (num == 49) {
                 clearInterval(timeControl)
+                
+                setTimeout(function () {
+                    $("#midPanel").fadeIn();
+                  },101)
             }
         }, 100)
 

@@ -65,7 +65,7 @@
             background-color: rgb(255, 153, 0);
         }
 
-        .rightPanelNum{
+        .rightPanelNum {
             width: 60px;
             height: 60px;
             font-size: 30px;
@@ -76,16 +76,26 @@
             background-color: yellowgreen;
             color: rgb(255, 255, 255);
             border-radius: 60px;
-           
+
         }
 
+  
     </style>
 
 </head>
 
 <body>
 
-    <div class="container" style="height: 31rem;">
+    <!-- <div class="container" style="height: 31rem;">
+   
+
+
+    </div> -->
+
+
+
+    <div class="container">
+
         <div class="row">
             <div class="col-12">
                 <div id="column" class="d-flex flex-wrap">
@@ -94,18 +104,12 @@
             </div>
         </div>
 
-
-    </div>
-
-
-
-    <div class="container">
         <div class="border"></div>
         <div class="row mt-5">
 
             <div class="col-4">
 
-                <div id="leftPanel" class="d-flex flex-wrap  ">
+                <div id="leftPanel" class="d-flex flex-wrap">
 
                 </div>
 
@@ -113,16 +117,16 @@
 
             <div class="col-4">
 
-                <div id="midPanel" class="text-center">
+                <div id="midPanel" class="text-center" style="display: none;">
 
-                    
+
                     <div class="mb-3"><input id="selectInput" type="text"></div>
                     <div><button id="addBtn" class="btn btn-primary">Add Number</button></div>
                     <div class="text-center"><button id="start" class="btn btn-danger"
                             style="display: none;">Start</button></div>
 
-                            <div class="text-center"><button id="reset" class="btn btn-danger"
-                                style="display: none;">Reset</button></div>
+                    <div class="text-center"><button id="reset" class="btn btn-danger"
+                            style="display: none;">Reset</button></div>
 
                 </div>
 
@@ -131,7 +135,7 @@
             <div class="col-4">
 
                 <div id="rightPanel" class=" d-flex">
-                    
+
                     <!-- <div class="fs-1 text-danger fw-bold mx-auto">Miss!</div> -->
 
                 </div>
