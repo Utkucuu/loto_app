@@ -5,7 +5,7 @@ $(document).ready(function () {
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
     const rightPanel = document.getElementById("rightPanel")
-
+  var element = document.getElementsByClassName("ball pt-2")
     /********** Adım 2 ***********/
     const numList = []
     console.log(numList)
@@ -19,14 +19,7 @@ $(document).ready(function () {
    
     
 
-    var element = document.getElementsByClassName("ball pt-2")
-       
-  console.log(element)
-    
-  
-  setTimeout(function () {
-    element[0].remove() 
-    },101)
+
   
 
 
@@ -56,6 +49,13 @@ $(document).ready(function () {
     }
     
   
+  
+    setTimeout(function () {
+        element[0].style.display = "none"
+        },101)
+
+
+
  /********** Adım 3 ***********/
     var c = 0
 
