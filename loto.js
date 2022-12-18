@@ -8,14 +8,14 @@ $(document).ready(function () {
     var element = document.getElementsByClassName("ball pt-2")
     /********** Adım 2 ***********/
     const numList = []
-    console.log(numList)
+
 
     arrPush()
 
     function arrPush() {
         var num = -1
 
-        // console.log(column.children[0])
+
         var timeControl = setInterval(function () {
             num++
             numList.push(num)
@@ -29,10 +29,10 @@ $(document).ready(function () {
 
             if (num == 49) {
                 clearInterval(timeControl)
-                
+
                 setTimeout(function () {
                     $("#midPanel").fadeIn();
-                  },101)
+                }, 101)
             }
         }, 100)
 
@@ -57,9 +57,9 @@ $(document).ready(function () {
         numDiv.className = "letfNum"
 
         if (0 < selectInput.value && selectInput.value < 50) {
-
-            if (!selecList.includes(selectInput.value)) {
-
+          
+            if (!selecList.includes(Number(selectInput.value))) {
+              console.log(c)
                 c++
                 leftPanel.appendChild(numDiv)
 
@@ -89,7 +89,7 @@ $(document).ready(function () {
             issue = (Math.floor(Math.random() * 49) + 1) // ceil - floor
             if (numRandom.indexOf(issue) == -1) {
                 numRandom.push(issue)
-                console.log(issue)
+
             }
             else {
                 i--
@@ -121,7 +121,7 @@ $(document).ready(function () {
                 counter = 0
                 numControl++
 
-                console.log(numControl)
+
 
                 if (numList.includes(numRandom[numControl])) {
 
@@ -147,19 +147,19 @@ $(document).ready(function () {
 
                 setInterval(function () {
 
-                    if(rightPanel.children[0] == null){
+                    if (rightPanel.children[0] == null) {
                         rightPanel.innerHTML = `<div class="fs-1 text-danger fw-bold mx-auto">Miss!</div>`
 
-                        setInterval(function(){
+                        setInterval(function () {
                             window.location.reload()
-                        },2000)
+                        }, 2000)
                     }
 
-                  },3000)
-                
+                }, 3000)
 
 
-                
+
+
             }
         }, 10)
 

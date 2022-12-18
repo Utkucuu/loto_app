@@ -11,96 +11,23 @@
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
 
-    <style>
-        div {
-            border: 1px solid red;
-        }
-
-        .ball {
-            width: 80px;
-            height: 80px;
-            font-size: 40px;
-            font-weight: bold;
-            margin: 10px;
-            text-align: center;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: rgb(255, 153, 0);
-            color: rgb(255, 255, 255);
-            border-radius: 80px;
-            display: none;
-        }
-
-
-        .ballYellow {
-
-            width: 80px;
-            height: 80px;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px;
-            text-align: center;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: yellowgreen;
-            color: rgb(255, 255, 255);
-            border-radius: 80px;
-            display: none;
-        }
-
-
-        .letfNum {
-
-            font-size: 40px;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-
-        #selectInput {
-            width: 3rem;
-            height: 3rem;
-            font-size: 2rem;
-            font-weight: bold;
-            color: black;
-            text-align: center;
-            background-color: rgb(255, 153, 0);
-        }
-
-        .rightPanelNum {
-            width: 60px;
-            height: 60px;
-            font-size: 30px;
-            font-weight: bold;
-            margin: 10px;
-            text-align: center;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: yellowgreen;
-            color: rgb(255, 255, 255);
-            border-radius: 60px;
-
-        }
-
-  
-    </style>
+   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
-    <!-- <div class="container" style="height: 31rem;">
-   
-
-
-    </div> -->
-
 
 
     <div class="container">
 
         <div class="row">
             <div class="col-12">
+
                 <div id="column" class="d-flex flex-wrap">
 
                 </div>
+
+
             </div>
         </div>
 
@@ -121,11 +48,11 @@
 
 
                     <div class="mb-3"><input id="selectInput" type="text"></div>
-                    <div><button id="addBtn" class="btn btn-primary">Add Number</button></div>
-                    <div class="text-center"><button id="start" class="btn btn-danger"
+                    <div><button id="addBtn" class="btn btn-outline-primary">Add Number</button></div>
+                    <div class="text-center"><button id="start" class="btn btn-outline-danger"
                             style="display: none;">Start</button></div>
 
-                    <div class="text-center"><button id="reset" class="btn btn-danger"
+                    <div class="text-center"><button id="reset" class="btn btn-outline-danger"
                             style="display: none;">Reset</button></div>
 
                 </div>
