@@ -5,65 +5,47 @@ $(document).ready(function () {
     const selectInput = document.getElementById("selectInput")
     const leftPanel = document.getElementById("leftPanel")
     const rightPanel = document.getElementById("rightPanel")
-  var element = document.getElementsByClassName("ball pt-2")
+    var element = document.getElementsByClassName("ball pt-2")
     /********** Adım 2 ***********/
     const numList = []
     console.log(numList)
 
     arrPush()
 
-    
-
-    
-
-   
-    
-
-
-  
-
-
-    function arrPush() {  
+    function arrPush() {
         var num = -1
-        
-        
-        
+
         // console.log(column.children[0])
         var timeControl = setInterval(function () {
             num++
             numList.push(num)
-            
+
             var span = document.createElement("span")
             span.className = "ball pt-2 "
             span.innerHTML += `${num}`
-            
+
             column.appendChild(span)
             $(span).fadeIn("");
-            
+
             if (num == 49) {
                 clearInterval(timeControl)
             }
         }, 100)
-        
-        
+
     }
-    
-  
-  
+
     setTimeout(function () {
         element[0].style.display = "none"
-        },101)
+    }, 101)
 
-
-
- /********** Adım 3 ***********/
+    /********** Adım 3 ***********/
     var c = 0
 
     const selecList = []
 
     $("#addBtn").click(function () {
 
-            $('#selectInput').focus()
+        $('#selectInput').focus()
 
         var numDiv = document.createElement("div")
 
@@ -91,7 +73,7 @@ $(document).ready(function () {
 
     });
 
- /********** Adım 4 ***********/
+    /********** Adım 4 ***********/
 
     $('#start').click(function () {
 
@@ -100,7 +82,7 @@ $(document).ready(function () {
         const numRandom = []
         var issue
         for (let i = 0; i < 6; i++) {
-            issue = (Math.floor(Math.random() * 49)+1) // ceil - floor
+            issue = (Math.floor(Math.random() * 49) + 1) // ceil - floor
             if (numRandom.indexOf(issue) == -1) {
                 numRandom.push(issue)
                 console.log(issue)
@@ -128,8 +110,7 @@ $(document).ready(function () {
 
             }
 
-            
- /********** Adım 4-a ***********/
+            /********** Adım 4-a ***********/
 
             else {
 
@@ -141,7 +122,7 @@ $(document).ready(function () {
                 if (numList.includes(numRandom[numControl])) {
 
                     column.children[numRandom[numControl]].style.background = "yellowGreen"
-               
+
                 }
 
                 if (numControl == 5) {
@@ -152,21 +133,41 @@ $(document).ready(function () {
 
                             rightPanel.innerHTML += `<div class="rightPanelNum pt-1">${e}</div>`
 
+
                         }
+
+
+
                     });
                 }
+
+                setInterval(function () {
+
+                    if(rightPanel.children[0] == null){
+                        rightPanel.innerHTML = `<div class="fs-1 text-danger fw-bold mx-auto">Miss!</div>`
+
+                        setInterval(function(){
+                            window.location.reload()
+                        },2000)
+                    }
+
+                  },3000)
+                
+
+
+                
             }
         }, 10)
 
+        $("#start").fadeOut(1);
+
+        $("#reset").fadeIn(1000);
+
     });
 
+    $('#reset').click(function () {
+        window.location.reload()
 
-
-
-
-
-
-
-
+    });
 
 });
