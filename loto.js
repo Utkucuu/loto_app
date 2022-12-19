@@ -80,6 +80,8 @@ $(document).ready(function () {
 
     });
 
+    
+
     /** 6 sayı seçildiğinde start butonu aktif olur ve seçme animasyonu butona tıklayınca başlar. Random 6 sayı oluşturulup bu sayıların aynı olmaması sağlanır. */
     $('#start').click(function () {
 
