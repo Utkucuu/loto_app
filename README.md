@@ -7,5 +7,5 @@
 
 * HTML - CSS - Bootstrap v5.1.3 - Js - Jquery 
 
-- Zaman fonksiyonları ile koşul yönetimi çalışışmştır.
+- Zaman fonksiyonları ile koşul yönetimi çalışılmştır.
 
