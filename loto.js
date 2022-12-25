@@ -108,23 +108,23 @@ $(document).ready(function () {
 
         var numControl = -1
 
-        /**aşağıdaki fonksiyon her çalıştığında sırası ile numaraların arkaplan rengi değişir ve counter değeri artar. Counter değerinin artmasıyla birlikte bir sonraki sayıya geçiş sağlanır, böylece 49. sayıya kadar tüm sayıların arkaplanı yeşil olup... */
+        /**aşağıdaki fonksiyon her çalıştığında sırası ile numaraların arkaplan rengi değişir ve counter değeri artar. Counter değerinin artmasıyla birlikte bir sonraki sayıya geçiş sağlanır, böylece 49. sayı dahil tüm sayıların arkaplanı yeşil olup... */
         var draw = setInterval(function () {
 
             counter++
 
-            if (counter < 49) {
+            if (counter < 50) {
                 column.children[counter].className = "ballYellow pt-2"
                 /** alttaki setInterval sayesinde tekrar eski haline döner. */
                 setTimeout(function () {
                     column.children[counter].className = "ball pt-2"
 
-                }, 2)
+                }, 10)
 
             }
 
             else {
-                //burada ise counter 49 a eşit olduğunda çalışacak kodlar bulunuyor. Counter 49 ise derleyici bu else bloğuna girer numControl değeri 1 artar. Bunun sebebi seçilen 6 sayı olduğu için start butonuna bastıktan sonra random sayı seçme animasyonunun 6 kere oynatılmasıdır. 6. seferden sonra ekrandaki numaralardan 6 tanesi yeşil yanıyor demektir.
+                //burada ise counter 50 a eşit olduğunda çalışacak kodlar bulunuyor. Counter 50 ise derleyici bu else bloğuna girer numControl değeri 1 artar. Bunun sebebi seçilen 6 sayı olduğu için start butonuna bastıktan sonra random sayı seçme animasyonunun 6 kere oynatılmasıdır. 6. seferden sonra ekrandaki numaralardan 6 tanesi yeşil yanıyor demektir.
                 counter = 0
                 numControl++
 
@@ -147,7 +147,7 @@ $(document).ready(function () {
                 }
 
                 setInterval(function () {
-                    //tüm animasyon bittikten sonra rightPanel in alt elemanlarından 0. index boş ise hiçbir sayıyı tutturamamışız demektir. bu durumda 2 rigtPanelde bir text yazar ve 2 sn sonra sayfa yenilenir
+                    //  tüm animasyon bittikten sonra rightPanel in alt elemanlarından 0. index boş ise hiçbir sayıyı tutturamamışız demektir. bu durumda 2 rigtPanelde bir text yazar ve 2 sn sonra sayfa yenilenir
                     if (rightPanel.children[0] == null) {
                         rightPanel.innerHTML = `<div class="fs-1 text-danger fw-bold mx-auto">Miss!</div>`
 
@@ -155,9 +155,9 @@ $(document).ready(function () {
                             window.location.reload()
                         }, 2000)
                     }
-                }, 3000)
+                }, 13000)
             }
-        }, 10)
+        }, 50)
 
 
     });
