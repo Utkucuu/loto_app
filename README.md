@@ -1,6 +1,7 @@
 
 ### loto app
 
+https://tryloto.netlify.app
 
 <img src="image/image.png" alt="" width="800">
 
